@@ -1,7 +1,7 @@
-package creative_cash_draw_solutions;
+package creative_cash;
 
 public interface ChangeProcessor {
 	public void initialize(String paymentFileName);
-	public void inputIsValid();
+	public boolean inputIsValid();
 	public void calculateChange();
 }
