@@ -1,2 +1,2 @@
 currency=United States
-random=3
+random_divisor=3

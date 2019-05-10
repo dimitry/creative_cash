@@ -12,7 +12,7 @@ import java.util.Random;
 //Random implementation for processing change. Calculation results in the random amounts of change for a 
 //specific owed amount. The owed amount must be given in the config file under "random".
 public class RandomChangeProcessor extends BasicChangeProcessor {
-	final private String RAND_PROP_NAME = "random";
+	final private String RAND_PROP_NAME = "random_divisor";
 	int randomCondition;
 	
 	public RandomChangeProcessor() {
@@ -22,17 +22,6 @@ public class RandomChangeProcessor extends BasicChangeProcessor {
 	private void assignRandomTrigger() {
 		String randomStr = super.getConfiguration(RAND_PROP_NAME);
 		randomCondition = Integer.parseInt(randomStr);
-	}
-	
-	@Override
-	public void initialize(String paymentFileLocation) {
-		super.initialize(paymentFileLocation);
-		assignRandomTrigger();
-	}
-	
-	@Override
-	public boolean inputIsValid() {
-		return super.inputIsValid();
 	}
 	
 	private boolean meetsRandomCondition(String numString){
@@ -116,6 +105,17 @@ public class RandomChangeProcessor extends BasicChangeProcessor {
 		
 	}
 	
+	
+	@Override
+	public void initialize(String paymentFileLocation) {
+		super.initialize(paymentFileLocation);
+		assignRandomTrigger();
+	}
+	
+	@Override
+	public boolean inputIsValid() {
+		return super.inputIsValid();
+	}
 	
 	@Override
 	public void calculateChange() {

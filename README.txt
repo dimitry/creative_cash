@@ -20,3 +20,14 @@ for a single instance of that denomination. Then on the next line,
 give the plural noun for that same denomination. See "United States.txt" for
 an example. The app will use whatever currency is listed in the config file.
 
+Thought process for this application:
+* What might happen if the client needs to change the random divisor? 
+  This can be done by changing the random property in the config file
+* What might happen if the client needs to add another special case (like the random twist)? 
+  A new implementation of the ChangeProcessor interface can be created or a new child of
+  the BasicChangeProcessor can be created so that only the code that is relevant to the 
+  special case needs to be written. 
+* What might happen if sales closes a new client in France? 
+  A new currency file can be created and the config can be edited so that the new 
+  currency can be used.
+
