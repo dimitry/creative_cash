@@ -1,5 +1,5 @@
 Running the application:
-The application can be compiled/executed with the "start" bash script in the projects root
+The application can be compiled/executed with the "start" bash script in the project's root
 folder. The "start" script takes the payments file name or location as an argument. 
 Example: ./start test_input.txt
 Results are printed to the change.txt file.
