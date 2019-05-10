@@ -28,6 +28,6 @@ Thought process for this application:
   the BasicChangeProcessor can be created so that only the code that is relevant to the 
   special case needs to be written. 
 * What might happen if sales closes a new client in France? 
-  A new currency file can be created and the config can be edited so that the new 
-  currency can be used.
+  A new currency file can easily be created by the client and the config can be edited by 
+  the client as well, so that the new currency can be used.
 
