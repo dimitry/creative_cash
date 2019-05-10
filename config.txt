@@ -1,1 +1,2 @@
-country=United States
+currency=United States
+random=3

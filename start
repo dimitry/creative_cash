@@ -1,0 +1,3 @@
+#!/bin/bash
+javac src/creative_cash/*.java
+java -classpath src creative_cash/App $1

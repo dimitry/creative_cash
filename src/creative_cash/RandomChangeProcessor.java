@@ -15,14 +15,18 @@ public class RandomChangeProcessor extends BasicChangeProcessor {
 	final private String RAND_PROP_NAME = "random";
 	int randomCondition;
 	
+	public RandomChangeProcessor() {
+		super();
+	}
+	
 	private void assignRandomTrigger() {
 		String randomStr = super.getConfiguration(RAND_PROP_NAME);
 		randomCondition = Integer.parseInt(randomStr);
 	}
 	
 	@Override
-	public void initialize(String paymentFileName) {
-		super.initialize(paymentFileName);
+	public void initialize(String paymentFileLocation) {
+		super.initialize(paymentFileLocation);
 		assignRandomTrigger();
 	}
 	
@@ -96,6 +100,9 @@ public class RandomChangeProcessor extends BasicChangeProcessor {
 					
 				}
 				writer.write(System.getProperty("line.separator"));
+			}
+			else {
+				writer.write("0\n");
 			}
 		}
 		catch (IOException e) {

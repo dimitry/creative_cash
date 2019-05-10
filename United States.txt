@@ -1,5 +1,10 @@
 dollar=1
+dollars
 penny=.01
+pennies
 quarter=.25
+quarters
 dime=.1
-nickel=.5
+dimes
+nickel=.05
+nickels

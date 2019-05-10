@@ -16,7 +16,7 @@ import java.util.Scanner;
 //Normal implementation for processing change. Calculation results in the least amount of change possible.
 public class BasicChangeProcessor implements ChangeProcessor {
 	private final String CONFIG_FILE_NAME = "config.txt";
-	private final String OUTPUT_FILE_NAME = "change_to_give_back.txt";
+	private final String OUTPUT_FILE_NAME = "change.txt";
 	
 	private Boolean inputIsValid;
 	private StringBuilder errorLog;
@@ -106,8 +106,6 @@ public class BasicChangeProcessor implements ChangeProcessor {
 	}
 	
 	protected String getConfiguration(String prop) {
-		System.out.println(prop);
-		System.out.println(config.getProperty(prop));
 		return config.getProperty(prop);
 		
 	}
@@ -281,6 +279,9 @@ public class BasicChangeProcessor implements ChangeProcessor {
 					
 				}
 				writer.write(System.getProperty("line.separator"));
+			}
+			else {
+				writer.write("0\n");
 			}
 		}
 		catch (IOException e) {
