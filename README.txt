@@ -10,7 +10,7 @@ will be used. The configuration/currency can also be changed, if desired.
 configuration:
 The config file contains the currency file name ("United States") and the
 random trigger ("3"). The random trigger can be changed to any integer. The 
-currency can be changed to any text file that exists in the project's 
+currency can be changed to any file name/extension that exists in the projects 
 root directory, as long as that file has the correct format. 
 
 currency:
