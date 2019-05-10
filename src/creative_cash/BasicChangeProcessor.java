@@ -106,11 +106,16 @@ public class BasicChangeProcessor implements ChangeProcessor {
 	}
 	
 	protected String getConfiguration(String prop) {
+		System.out.println(prop);
+		System.out.println(config.getProperty(prop));
 		return config.getProperty(prop);
+		
 	}
 	
 	private void assignConfiguration(String prop) {
+		
 		this.currencyFileName = getConfiguration(prop) + ".txt";
+		
 	}
 	
 	//read denominations from currency file in working directory

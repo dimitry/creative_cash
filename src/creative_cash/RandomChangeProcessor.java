@@ -15,7 +15,7 @@ public class RandomChangeProcessor extends BasicChangeProcessor {
 	final private String RAND_PROP_NAME = "random";
 	int randomCondition;
 	
-	private void getRandomTrigger() {
+	private void assignRandomTrigger() {
 		String randomStr = super.getConfiguration(RAND_PROP_NAME);
 		randomCondition = Integer.parseInt(randomStr);
 	}
@@ -23,7 +23,7 @@ public class RandomChangeProcessor extends BasicChangeProcessor {
 	@Override
 	public void initialize(String paymentFileName) {
 		super.initialize(paymentFileName);
-		getRandomTrigger();
+		assignRandomTrigger();
 	}
 	
 	@Override
